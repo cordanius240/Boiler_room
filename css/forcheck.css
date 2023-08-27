@@ -1,0 +1,138 @@
+.scroll-table-body {
+	height: 300px;
+	overflow-y: auto;
+	margin-top: 0px;
+	margin-bottom: 20px;
+	border-bottom: 1px solid #eee;
+}
+
+.scroll-table {
+	width: 24%;
+	max-width: 24%;
+}
+
+/* Стили для скролла */
+::-webkit-scrollbar {
+	width: 6px;
+}
+
+::-webkit-scrollbar-track {
+	box-shadow: inset 0 0 6px rgba(0, 0, 0, 0.3);
+}
+
+::-webkit-scrollbar-thumb {
+	box-shadow: inset 0 0 6px rgba(0, 0, 0, 0.3);
+}
+
+.popup-fade:before {
+	content: '';
+	background: #000;
+	position: fixed;
+	left: 0;
+	top: 0;
+	width: 100%;
+	height: 100%;
+	opacity: 0.7;
+	z-index: 9999;
+}
+
+.popup-fade {
+	display: none;
+}
+
+.popup {
+	position: fixed;
+	top: 50%;
+	left: 50%;
+	transform: translate(-50%, -50%);
+	width: 80%;
+	max-width: 100%;
+	height: 600px;
+	max-height: 100%;
+	padding: 20px;
+	background: white;
+	border: 1px solid orange;
+	border-radius: 4px;
+	z-index: 99999;
+	opacity: 1;
+	overflow: auto;
+}
+
+.forparam {
+	display: table;
+	width: 100%;
+}
+
+.forparam-row {
+	display: table-row;
+}
+
+.spisokparam {
+	display: table-cell;
+	width: 50%;
+	vertical-align: top;
+	padding: 0;
+	background: #fff2e1;
+}
+
+.timeparam {
+	display: table-cell;
+	width: 50%;
+	vertical-align: top;
+	padding: 0;
+	background: white;
+}
+
+.popup-close,
+.popup-close-mob {
+	position: absolute;
+	bottom: 10px;
+	right: 10px;
+}
+
+.timeforcheckbutt1 {
+	position: absolute;
+	bottom: 10px;
+	right: 80px;
+}
+
+body {}
+
+div.f1ist {
+	margin-top: 50px;
+	margin-bottom: 10px;
+}
+
+.popup-fade-mob:before {
+	content: '';
+	background: #000;
+	position: fixed;
+	left: 0;
+	top: 0;
+	width: 100%;
+	height: 100%;
+	opacity: 0.7;
+	z-index: 9999;
+}
+
+.popup-fade-mob {
+	display: none;
+}
+
+.popup-mob {
+	position: fixed;
+	top: 50%;
+	left: 50%;
+	transform: translate(-50%, -50%);
+	width: 30%;
+	max-width: 100%;
+	height: 50%;
+	max-height: 100%;
+	padding: 20px;
+	background: white;
+	border: 1px solid orange;
+	border-radius: 4px;
+	z-index: 99999;
+	opacity: 1;
+	overflow: auto;
+}

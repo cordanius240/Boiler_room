@@ -1,0 +1,72 @@
+USE [graph_demo]
+GO
+/****** Object:  UserDefinedFunction [dbo].[CutDatetoDay]    Script Date: 01.10.2022 16:52:33 ******/
+SET ANSI_NULLS ON
+GO
+SET QUOTED_IDENTIFIER ON
+GO
+-- =============================================
+-- Author:		<Author,,Name>
+-- Create date: <Create Date, ,>
+-- Description:	<Description, ,>
+-- =============================================
+ALTER FUNCTION [dbo].[CutDatetoDay]
+(
+	@T datetime
+)
+RETURNS datetime
+AS
+BEGIN
+	-- Return the result of the function
+	RETURN dateadd(day,datediff(day,0,@T),0)
+
+END
+
+USE [graph_demo]
+GO
+/****** Object:  UserDefinedFunction [dbo].[CutDatetoHour]    Script Date: 01.10.2022 16:53:21 ******/
+SET ANSI_NULLS ON
+GO
+SET QUOTED_IDENTIFIER ON
+GO
+-- =============================================
+-- Author:		<Author,,Name>
+-- Create date: <Create Date, ,>
+-- Description:	<Description, ,>
+-- =============================================
+ALTER FUNCTION [dbo].[CutDatetoHour]
+(
+	@T datetime
+)
+RETURNS datetime
+AS
+BEGIN
+	-- Return the result of the function
+	RETURN dateadd(hour,datediff(hour,0,@T),0)
+
+END
+
+
+USE [graph_demo]
+GO
+/****** Object:  UserDefinedFunction [dbo].[CutDatetoMonth]    Script Date: 01.10.2022 16:53:30 ******/
+SET ANSI_NULLS ON
+GO
+SET QUOTED_IDENTIFIER ON
+GO
+-- =============================================
+-- Author:		<Author,,Name>
+-- Create date: <Create Date, ,>
+-- Description:	<Description, ,>
+-- =============================================
+ALTER FUNCTION [dbo].[CutDatetoMonth]
+(
+	@T datetime
+)
+RETURNS datetime
+AS
+BEGIN
+	-- Return the result of the function
+	RETURN dateadd(month,datediff(month,0,@T),0)
+
+END
