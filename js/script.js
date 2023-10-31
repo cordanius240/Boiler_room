@@ -4,20 +4,27 @@ let div1 = document.querySelector('.swiper-wrapper')
 div1.classList.remove("swiper-wrapper");
 div1.classList.add("lists_display");
 let lists = document.querySelectorAll('.swiper-slide');
+function paramlist(event) {
+    let trueul = document.querySelector(".swiper-slide-active");
+    let divul = trueul.querySelector(".swiper-no-swiping");
+    divul.querySelector(".modal-container__params-items").appendChild(event.target);
+    event.target.addEventListener('dblclick', (event) => {
+        axislist(event)
+    })
+}
+function axislist(event) {
+    let trueul = document.querySelector("#params_list");
+    trueul.appendChild(event.target);
+    event.target.addEventListener('dblclick', (event) => { paramlist(event) })
 
+}
 lists.forEach((list) => { list.classList.remove("swiper-slide") })
 $(".main-container__button").click(function () {
     if (window.matchMedia("(max-width: 768px)").matches) {
         var liElements = document.querySelectorAll('.modal-container__params-items li');
         liElements.forEach((lielem) => {
             lielem.addEventListener('dblclick', (event) => {
-                let trueul = document.querySelector(".swiper-slide-active");
-                let divul = trueul.querySelector(".swiper-no-swiping");
-                divul.querySelector(".modal-container__params-items").appendChild(event.target);
-                event.target.addEventListener('dblclick', (event) => {
-                    let trueul = document.querySelector("#params_list");
-                    trueul.appendChild(event.target);
-                })
+                paramlist(event)
             })
         });
         document.querySelector('#swipercontainer').classList.add("swiper");

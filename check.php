@@ -64,7 +64,7 @@ if (isset($_GET['idkotl'])) {
             <div class="modal-container">
                 <div class="modal-container__content">
                     <div class="modal-container__lists">
-                        <div class="modal-container__list">
+                        <div class="modal-container__list" id="params-container">
                             <p class="modal-container__params-title">
                                 Параметры
                             </p>
